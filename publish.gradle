@@ -3,11 +3,11 @@ apply plugin: 'maven'
 uploadArchives {
     repositories {
         mavenDeployer {
-            repository(url: uri("/Users/bkjk/Downloads"))
+            repository(url: uri(project.REPOSITORY))
             pom.project {
-                groupId "com.top.plugin"
-                artifactId "fat-aar"
-                version "1.0.0-SNAPSHOT"
+                groupId project.GROUPID
+                artifactId project.ARTIFACTID
+                version project.VERSION
             }
         }
     }
