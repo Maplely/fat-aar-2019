@@ -11,7 +11,7 @@ allprojects {
 }
 ```
 ```
-classpath "com.github.top2015:fat-aar-2019:v1.0.0"
+classpath "com.github.top2015:fat-aar-2019:1.0"
 ```
 + 在library中build.gradle中引用plugin
 ```
