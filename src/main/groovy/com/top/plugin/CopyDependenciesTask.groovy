@@ -7,13 +7,15 @@ import org.gradle.api.artifacts.ResolvedArtifact
 import org.gradle.api.artifacts.ResolvedDependency
 import org.gradle.api.tasks.TaskAction
 
+import java.util.regex.Pattern
+
 class CopyDependenciesTask extends DefaultTask {
 
     DependencySet dependencies
     Set<ResolvedDependency> artifacts
     String variantName
     String gradleVersion
-
+    String resourceRegx
     @TaskAction
     def executeTask() {
         if (temporaryDir.exists()) {
@@ -125,18 +127,13 @@ class CopyDependenciesTask extends DefaultTask {
 
         artifacts.each {
             it.moduleArtifacts.each {
-                println(it.name+"+++begin!!!!")
+                println(">>>>  "+it.name+"  >>>> begin merge !!!")
                 processDependency(it)
             }
         }
     }
 
-    /**
-     * In this case dependency is outside from workspace, download from maven repository if file is
-     * a jar directly move to lib/ folder and analyze pom file for detect another transitive dependency
-     * @param dependency
-     * @return
-     */
+
     def processDependency(ResolvedArtifact dependency) {
         if (dependency.type == "aar") {
             processZipFile(dependency.file, dependency)
@@ -289,7 +286,13 @@ class CopyDependenciesTask extends DefaultTask {
                 rTxt.eachLine { line ->
                     //noinspection GroovyUnusedAssignment
                     def (type, subclass, name, value) = line.tokenize(' ')
-                    rMap[subclass].putAt(name, type)
+                    if(resourceRegx!=null){
+                        if(Pattern.matches(resourceRegx,name)){
+                            rMap[subclass].putAt(name, type)
+                        }
+                    }else{
+                        rMap[subclass].putAt(name, type)
+                    }
                 }
             }
 

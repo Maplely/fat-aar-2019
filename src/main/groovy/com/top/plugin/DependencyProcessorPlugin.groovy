@@ -24,7 +24,7 @@ class DependencyProcessorPlugin implements Plugin<Project> {
                 gradleVersion = dep.version
             }
         }
-
+        project.extensions.create("fataar",FatAarExtension)
         project.afterEvaluate {
             project.configurations.api.canBeResolved = true
             project.android.libraryVariants.all { variant ->
@@ -43,6 +43,7 @@ class DependencyProcessorPlugin implements Plugin<Project> {
                 def compileRsTask = R2ClassTask(variant, rsDirPath, rsCompiledDirPath)
                 def rsJarTask = bundleRJarTask(variant, rsCompiledDirPath, sourceAarPath)
                 def aarTask = bundleFinalAAR(variant, sourceAarPath)
+
                 assembleTask.finalizedBy(copyTask)
                 copyTask.finalizedBy(mergeTask)
                 mergeTask.finalizedBy(compileRsTask)
@@ -59,6 +60,7 @@ class DependencyProcessorPlugin implements Plugin<Project> {
             it.artifacts = project.configurations.api.resolvedConfiguration.firstLevelModuleDependencies
             it.variantName = variant.name
             it.gradleVersion = this.gradleVersion
+            it.resourceRegx=project.fataar.resourceRegx
         })
     }
 
