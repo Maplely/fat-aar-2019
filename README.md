@@ -1,4 +1,5 @@
 # fat-aar
+[![](https://www.jitpack.io/v/top2015/fat-aar-2019.svg)](https://www.jitpack.io/#top2015/fat-aar-2019)
 用于android library aar合并
 ### 使用方法
 + 将插件上传至maven仓库 在工程中引用
@@ -50,6 +51,9 @@ aar包括
 + 考虑灵活性，没有考虑打包工程依赖的子项目，即所有需要集成的module都需要手动引入
 + 本工程仅考虑打包远程maven依赖的方式，本地依赖的方式不建议使用本插件
 + 建议打包的aar不包含任何第三方库，否则容易引起冲突，为了兼容性与扩展性建议全原生实现
+### 感谢参考
+[android-fat-aar](https://github.com/adwiv/android-fat-aar)
+[fataar-gradle-plugin](https://github.com/Mobbeel/fataar-gradle-plugin)
 
 ### Contract & FeedBack
 Author: Li Haitao
