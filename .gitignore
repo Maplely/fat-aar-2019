@@ -35,3 +35,5 @@ captures/
 
 
 .DS_Store
+gradle.properties
+
