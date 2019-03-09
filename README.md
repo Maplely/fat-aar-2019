@@ -8,7 +8,8 @@ allprojects {
 		maven { url 'https://www.jitpack.io' }
 	}
 }
-
+```
+```
 classpath "com.github.top2015:fat-aar-2019:v1.0.0"
 ```
 + 在library中build.gradle中引用plugin
@@ -22,7 +23,7 @@ apply plugin: 'fat-aar'
 + 可以选择添加资源文件过滤，防止打包冲突
 ```
 fataar{
-    resourceRegx="bkjf.*|bk.*|Apollo.*"
+    resourceRegx=""
 }
 ```
 + 执行gradle打包命令，输出的合并后的aar文件
@@ -46,4 +47,19 @@ aar包括
 ### 注意点
 + android plugin版本变化可能导致task或者输出文件变化，从而导致合并失败，本插件支持gradle 3.0.x、3.1.x、3.2.x
 + aar集成的moudle不能在外部引用，否则会引起冲突
-+ 考虑灵活性 没有考虑打包工程依赖的子项目 即所有需要集成的module都需要手动引入
++ 考虑灵活性，没有考虑打包工程依赖的子项目，即所有需要集成的module都需要手动引入
++ 本工程仅考虑打包远程maven依赖的方式，本地依赖的方式不建议使用本插件
++ 建议打包的aar不包含任何第三方库，否则容易引起冲突，为了兼容性与扩展性建议全原生实现
+
+### Contract & FeedBack
+Author: Li Haitao
+
+Email: haitao.li_2016@163.com
+
+QQ:986086927
+
+GitHub: https://github.com/top2015
+
+任何缺陷、建议，欢迎给我发邮件，或在GitHub上创建问题单。
+
+Any bugs and recommendations, please send emails for me, or create issues on GitHub.
