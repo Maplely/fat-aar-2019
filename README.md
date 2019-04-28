@@ -61,9 +61,13 @@ aar文件包括
 
 ### Contract & FeedBack
 Author:HiTop
+
 Email: haitao.li_2016@163.com
+
 QQ:986086927
+
 GitHub: https://github.com/top2015
 
 任何缺陷、建议，欢迎给我发邮件，或在GitHub上创建问题单。
+
 Any bugs and recommendations, please send emails for me, or create issues on GitHub.
