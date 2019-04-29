@@ -10,7 +10,7 @@
 
 
 ### 使用方法
-+ 将插件上传至maven仓库 在工程中引用
+Step1. 将插件上传至maven仓库 在工程中引用
 ```
 allprojects {
 	repositories {
@@ -21,21 +21,21 @@ allprojects {
 ```
 classpath "com.github.top2015:fat-aar-2019:1.0"
 ```
-+ 在library中build.gradle中引用plugin
+Step2. 在library中build.gradle中引用plugin
 ```
 apply plugin: 'fat-aar'
 ```
-+ 需要打包进来的module 用api引用，如
+Step3. 需要打包进来的module 用api引用，如
 ```
  api 'com.top:xxxxx:2.0.0-SNAPSHOT'
 ```
-+ 选择需要打包进来的资源文件，防止打包冲突(支持正则表达式,例如根据项目的中前缀定制)
+Step4. 选择需要打包进来的资源文件，防止打包冲突(支持正则表达式,例如根据项目的中前缀定制)
 ```
 fataar{
     resourceRegx=""
 }
 ```
-+ 执行gradle打包命令，输出的合并后的aar文件
+Step5. 执行gradle打包命令，输出的合并后的aar文件
 
 ### 原理简介
 aar文件包括
