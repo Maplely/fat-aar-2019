@@ -6,7 +6,8 @@
 [![](https://www.jitpack.io/v/top2015/fat-aar-2019.svg)](https://www.jitpack.io/#top2015/fat-aar-2019)  
 Merging Librarys From Maven eventually generates an AAR
 
-### USE
+[中文](https://raw.githubusercontent.com/top2015/fat-aar-2019/master/README_CN.md)
+### USEAGE
 Step1. quote plugin address in project
 ```
 allprojects {
@@ -61,8 +62,8 @@ The above items are merged one by one.
 
 
 ### THANKS
-[android-fat-aar](https://github.com/adwiv/android-fat-aar)  
-[fataar-gradle-plugin](https://github.com/Mobbeel/fataar-gradle-plugin)
+>> [android-fat-aar](https://github.com/adwiv/android-fat-aar)  
+>> [fataar-gradle-plugin](https://github.com/Mobbeel/fataar-gradle-plugin)
 
 ### Contract & FeedBack
 Author:HiTop
