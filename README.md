@@ -4,7 +4,7 @@
 
 # fat-aar
 [![](https://www.jitpack.io/v/top2015/fat-aar-2019.svg)](https://www.jitpack.io/#top2015/fat-aar-2019)  
-用于将maven引用的aar包合并
+合并maven应用的library 最终生成一个aar
 
 ### 使用方法
 Step1. 将插件上传至maven仓库 在工程中引用
@@ -56,7 +56,7 @@ aar文件包括
 ### 注意点
 + android plugin版本变化可能导致task或者输出文件变化，从而导致合并失败，本插件支持gradle 3.0.x、3.1.x、3.2.x
 + 本工程仅考虑打包远程maven依赖的方式，本地依赖的方式不建议使用本插件，可以考虑目录区分
-+ 建议打包的aar不包含**第三方库**，否则容易引起版本冲突，android studio不会处理本地与maven引用版本依赖的问题，为了兼容性与扩展性建议全原生实现（最终生成的aar包在**被引用**过程中不能在implementation引用中，通过添加exclude的方式来排除依赖库，因为仓库名：库名：版本 这种是maven引用的方式，也是为了解决版本冲突，google推荐的引用库的方式）
++ 建议打包的aar不包含**第三方库**，否则容易引起版本冲突，android studio不会处理本地与maven引用版本依赖的问题，为了兼容性与扩展性建议**全原生**实现（最终生成的aar包在**被引用**过程中不能在implementation引用中，通过添加exclude的方式来排除依赖库，因为仓库名：库名：版本 这种是maven引用的方式，也是为了解决版本冲突，google推荐的引用库的方式）
 + 考虑灵活性，没有考虑打包工程依赖的子项目，即所有需要集成的module都需要手动引入。
 
 
