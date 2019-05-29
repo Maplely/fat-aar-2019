@@ -1,4 +1,8 @@
 # fat-aar
+<div align="center">
+<img src="https://raw.githubusercontent.com/top2015/fat-aar-2019/master/logo.png"  height="200" width="500">
+</div>
+
 [![](https://www.jitpack.io/v/top2015/fat-aar-2019.svg)](https://www.jitpack.io/#top2015/fat-aar-2019)  
 用于android library aar合并
 
