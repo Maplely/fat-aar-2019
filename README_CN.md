@@ -6,7 +6,7 @@
 [![](https://www.jitpack.io/v/top2015/fat-aar-2019.svg)](https://www.jitpack.io/#top2015/fat-aar-2019)  
 合并maven应用的library 最终生成一个aar
 
-[ENGLISH](https://raw.githubusercontent.com/top2015/fat-aar-2019/master/README.md)
+[ENGLISH](https://github.com/top2015/fat-aar-2019)
 
 ### 使用方法
 Step1. 将插件仓库地址在工程中引用
