@@ -8,7 +8,7 @@ Merging Librarys From Maven eventually generates an AAR
 
 [中文](https://github.com/top2015/fat-aar-2019/blob/master/README_CN.md)
 ### USEAGE
-<img src="https://github.com/top2015/fat-aar-2019/blob/master/image1.png?raw=true" height="150" width="150">
+<img src="https://github.com/top2015/fat-aar-2019/blob/master/image1.png?raw=true" height="350" width="450">
 Step1. quote plugin address in project
 ```
 allprojects {
