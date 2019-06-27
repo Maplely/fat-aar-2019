@@ -9,6 +9,9 @@
 [ENGLISH](https://github.com/top2015/fat-aar-2019)
 
 ### 使用方法
+
+<img src="https://github.com/top2015/fat-aar-2019/blob/master/image1.png?raw=true" height="350" width="450">
+
 Step1. 将插件仓库地址在工程中引用
 ```
 allprojects {
